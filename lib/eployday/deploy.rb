@@ -8,7 +8,7 @@ module Eployday
     match "deploy"
 
     def execute(m)
-      if PermissionChecker.allowed?(m.user.nick)
+      if PermissionChecker.allowed?(m.user)
         m.reply "#{m.user.nick}: beginning deploy."
         Kernel.system "sm deploy"
         m.reply "#{m.user.nick}: deploy finished."
