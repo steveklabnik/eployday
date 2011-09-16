@@ -1,0 +1,4 @@
+require 'eployday/cli'
+
+cli = Eployday::CLI.new(ARGV)
+cli.run
