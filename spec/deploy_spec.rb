@@ -6,10 +6,24 @@ describe Eployday::Deploy do
       Eployday::Deploy.ancestors.include?(Cinch::Plugin).should be_true
     end
 
-    it "executes a deploy" do
-      Kernel.should_receive(:system).with("sm deploy")
-      message = stub(:reply => nil, :user => stub(:nick => "steve"))
-      Eployday::Deploy.new(stub.as_null_object).execute(message)
+    context "execute" do
+      let(:message) {
+        message = stub(:reply => nil, :user => stub(:nick => "steve"))
+      }
+
+      it "executes a deploy" do
+        Eployday::PermissionChecker.should_receive(:allowed?).and_return true
+        Kernel.should_receive(:system).with("sm deploy")
+
+        Eployday::Deploy.new(stub.as_null_object).execute(message)
+      end
+
+      it "respects the permissions checker" do
+        Eployday::PermissionChecker.should_receive(:allowed?).and_return false
+        Kernel.should_not_receive(:system)
+
+        Eployday::Deploy.new(stub.as_null_object).execute(message)
+      end
     end
   end
 end

@@ -1,4 +1,5 @@
 require 'cinch'
+require 'eployday/permission_checker'
 
 module Eployday
   class Deploy
@@ -7,9 +8,11 @@ module Eployday
     match "deploy"
 
     def execute(m)
-      m.reply "#{m.user.nick}: beginning deploy."
-      Kernel.system "sm deploy"
-      m.reply "#{m.user.nick}: deploy finished."
+      if PermissionChecker.allowed?(m.user.nick)
+        m.reply "#{m.user.nick}: beginning deploy."
+        Kernel.system "sm deploy"
+        m.reply "#{m.user.nick}: deploy finished."
+      end
     end
   end
 end
