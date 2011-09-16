@@ -1,8 +1,8 @@
 module Eployday
   module PermissionChecker
     class << self
-      def allowed?(nick, list=load_whitelist)
-        list.include?(nick)
+      def allowed?(user, list=load_whitelist)
+        list.include?(user.nick) and user.authed?
       end
 
       def load_whitelist
