@@ -4,3 +4,4 @@
 Gemfile.lock
 pkg/*
 example.yml
+nohup.out
