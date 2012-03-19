@@ -6,7 +6,7 @@ module Eployday
       end
 
       def load_whitelist
-        @whitelist = %w[steveklabnik carols10cents wilkie cl0ckw0rk ddagradi]
+        @whitelist = Eployday::Configuration[:allowed_users]
       end
     end
   end

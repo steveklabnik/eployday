@@ -1,0 +1,8 @@
+---
+nick: rvm-site-deploy
+channels:
+  - "#rvm-test"
+trigger_text: "The build passed."
+allowed_users:
+  - travis-ci
+  - mpapis

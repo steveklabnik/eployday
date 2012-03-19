@@ -5,15 +5,14 @@ module Eployday
   class Deploy
     include Cinch::Plugin
 
-    match "deploy"
+    match Eployday::Configuration[:trigger_text]
 
     def execute(m)
       if PermissionChecker.allowed?(m.user)
         m.reply "#{m.user.nick}: beginning deploy."
-        Kernel.system "sm deploy"
+        Kernel.system Eployday::Configuration[:command]
         m.reply "#{m.user.nick}: deploy finished."
       end
     end
   end
 end
-

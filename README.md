@@ -7,17 +7,18 @@ IRC boot for automatic triggerring `sm deploy`.
 On server:
 
     gem install eployday
-    eployday example # will generate example.yml
 
-Edit settings in example.yml
+Example for auto deploy on travis-ci tests passed `rvm-site.yml`:
+
+    ---
+    nick: rvm-site-deploy
+    channels:
+      - "#rvm-test"
+    trigger_text: "The build passed."
+    allowed_users:
+      - travis-ci
+    command: "echo bdsm deploy"
 
 Start server with:
 
-    nohup eployday example.yml &
-
-Example for autodeploy on travis tests passed:
-
-    ---
-    users: travis-ci
-    triger: The build passed.
-    channel: #rvm-test
+    nohup eployday rvm-site.yml &
