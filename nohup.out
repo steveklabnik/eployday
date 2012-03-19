@@ -1,0 +1,95 @@
+[2012/03/19 18:40:12.236] !! [on handler] Registering handler with pattern `#<Cinch::Pattern:0x00000000dc59b0 @prefix=nil, @pattern=//, @suffix=nil>`, reacting on `connect`
+[2012/03/19 18:40:12.237] !! [plugin] deploy: Registering executor with pattern `#<Cinch::Pattern:0x00000000dc50c8 @prefix=nil, @pattern=/.*The build passed\..*/, @suffix=nil>`, reacting on `message`
+[2012/03/19 18:40:12.237] !! [on handler] Registering handler with pattern `#<Cinch::Pattern:0x00000000dc50c8 @prefix=nil, @pattern=/.*The build passed\..*/, @suffix=nil>`, reacting on `message`
+[2012/03/19 18:40:12.237] !! Connecting to irc.freenode.net:6667
+[2012/03/19 18:40:12.411] << NICK rvm-site-deploy
+[2012/03/19 18:40:12.411] << USER cinch 0 * :cinch
+[2012/03/19 18:40:12.541] >> :wolfe.freenode.net NOTICE * :*** Looking up your hostname...
+[2012/03/19 18:40:12.648] >> :wolfe.freenode.net NOTICE * :*** Checking Ident
+[2012/03/19 18:40:12.648] >> :wolfe.freenode.net NOTICE * :*** Couldn't look up your hostname
+[2012/03/19 18:40:12.648] >> :wolfe.freenode.net NOTICE * :*** No Ident response
+[2012/03/19 18:40:12.650] >> :wolfe.freenode.net 001 rvm-site-deploy :Welcome to the freenode Internet Relay Chat Network rvm-site-deploy
+[2012/03/19 18:40:12.650] >> :wolfe.freenode.net 002 rvm-site-deploy :Your host is wolfe.freenode.net[89.16.176.16/6667], running version ircd-seven-1.1.3
+[2012/03/19 18:40:12.650] >> :wolfe.freenode.net 003 rvm-site-deploy :This server was created Sun Nov 20 2011 at 13:26:13 GMT
+[2012/03/19 18:40:12.650] >> :wolfe.freenode.net 004 rvm-site-deploy wolfe.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQbcefgijklmnopqrstvz bkloveqjfI
+[2012/03/19 18:40:12.656] >> :wolfe.freenode.net 005 rvm-site-deploy CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQcgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+[2012/03/19 18:40:12.657] << JOIN #rvm-test
+[2012/03/19 18:40:12.657] >> :wolfe.freenode.net 005 rvm-site-deploy CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+[2012/03/19 18:40:12.657] >> :wolfe.freenode.net 005 rvm-site-deploy EXTBAN=$,arx WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+[2012/03/19 18:40:12.658] >> :wolfe.freenode.net 251 rvm-site-deploy :There are 276 users and 77492 invisible on 28 servers
+[2012/03/19 18:40:12.658] >> :wolfe.freenode.net 252 rvm-site-deploy 40 :IRC Operators online
+[2012/03/19 18:40:12.658] >> :wolfe.freenode.net 253 rvm-site-deploy 3 :unknown connection(s)
+[2012/03/19 18:40:12.658] >> :wolfe.freenode.net 254 rvm-site-deploy 40352 :channels formed
+[2012/03/19 18:40:12.658] >> :wolfe.freenode.net 255 rvm-site-deploy :I have 3493 clients and 2 servers
+[2012/03/19 18:40:12.658] >> :wolfe.freenode.net 265 rvm-site-deploy 3493 7408 :Current local users 3493, max 7408
+[2012/03/19 18:40:12.658] >> :wolfe.freenode.net 266 rvm-site-deploy 77768 79621 :Current global users 77768, max 79621
+[2012/03/19 18:40:12.658] >> :wolfe.freenode.net 250 rvm-site-deploy :Highest connection count: 7409 (7408 clients) (1311204 connections received)
+[2012/03/19 18:40:12.658] >> :wolfe.freenode.net 375 rvm-site-deploy :- wolfe.freenode.net Message of the Day - 
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :- Welcome to wolfe.freenode.net in Manchester, England, Uk!  Thanks to
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :- Bytemark Computer Consulting Ltd.  (www.bytemark.co.uk) for sponsoring
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :- this server!
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :-  
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :- WOLFE, GENE [1931-].  Prolific writer of short stories and
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :- novels. His best-known work is the multi-volume novel The
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :- Book of the New Sun. He has won multiple awards including
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :- the Nebula Award, the World Fantasy Award, The Campell
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :- Memorial Award and the Locus Award. He was awarded the World
+[2012/03/19 18:40:12.659] >> :wolfe.freenode.net 372 rvm-site-deploy :- Fantasy Award for lifetime achievement in 1996.
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :-  
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :- You're using freenode, a service of Peer-Directed Projects
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :- Center Ltd (http://freenode.net/pdpc.shtml).
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :-  
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :- By connecting to freenode you indicate that you have read
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :- and agree to adhere to our policies and procedures as per
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :- the website (http://freenode.net). We would like to remind
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :- you that unauthorized public logging of channels on the
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :- network is prohibited. Public channel logging should only
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :- take place where the channel owner(s) has requested this
+[2012/03/19 18:40:12.660] >> :wolfe.freenode.net 372 rvm-site-deploy :- and users of the channel are all made aware (if you are
+[2012/03/19 18:40:12.661] >> :wolfe.freenode.net 372 rvm-site-deploy :- publically logging your channel, you may wish to keep a
+[2012/03/19 18:40:12.661] >> :wolfe.freenode.net 372 rvm-site-deploy :- notice in topic and perhaps as a on-join message).
+[2012/03/19 18:40:12.661] >> :wolfe.freenode.net 372 rvm-site-deploy :-  
+[2012/03/19 18:40:12.661] >> :wolfe.freenode.net 372 rvm-site-deploy :- freenode runs an open proxy scanner. Your use of the network
+[2012/03/19 18:40:12.661] >> :wolfe.freenode.net 372 rvm-site-deploy :- indicates your acceptance of this policy. For details on
+[2012/03/19 18:40:12.760] >> :wolfe.freenode.net 372 rvm-site-deploy :- freenode network policy, please take a look at our policy
+[2012/03/19 18:40:12.761] >> :wolfe.freenode.net 372 rvm-site-deploy :- page (http://freenode.net/policy.shtml). Thank you for using
+[2012/03/19 18:40:12.761] >> :wolfe.freenode.net 372 rvm-site-deploy :- the network!
+[2012/03/19 18:40:12.761] >> :wolfe.freenode.net 372 rvm-site-deploy :-  
+[2012/03/19 18:40:12.761] >> :wolfe.freenode.net 372 rvm-site-deploy :- Don't forget to check out these other Peer-Directed Projects:
+[2012/03/19 18:40:12.761] >> :wolfe.freenode.net 372 rvm-site-deploy :- FOSSCON [http://www.fosscon.org] and fossevents 
+[2012/03/19 18:40:12.762] >> :wolfe.freenode.net 372 rvm-site-deploy :- [http://www.fossevents.org], and soon we'll repeat last years 
+[2012/03/19 18:40:12.762] >> :wolfe.freenode.net 372 rvm-site-deploy :- success with Picnics for Geeks across the globe, more info at 
+[2012/03/19 18:40:12.762] >> :wolfe.freenode.net 372 rvm-site-deploy :- [http://geeknic.org]
+[2012/03/19 18:40:12.762] >> :wolfe.freenode.net 372 rvm-site-deploy :-  
+[2012/03/19 18:40:12.762] >> :wolfe.freenode.net 372 rvm-site-deploy :- freenode is a service of Peer-Directed Projects Center Ltd,
+[2012/03/19 18:40:12.762] >> :wolfe.freenode.net 372 rvm-site-deploy :- a not for profit organisation registered in England and Wales.
+[2012/03/19 18:40:12.762] >> :wolfe.freenode.net 372 rvm-site-deploy :-  
+[2012/03/19 18:40:12.762] >> :wolfe.freenode.net 372 rvm-site-deploy :- If you support the work we do and wish to donate to the PDPC, 
+[2012/03/19 18:40:12.762] >> :wolfe.freenode.net 372 rvm-site-deploy :- you may do so over at http://freenode.net/pdpc_donations.shtml
+[2012/03/19 18:40:12.763] >> :wolfe.freenode.net 372 rvm-site-deploy :-  
+[2012/03/19 18:40:12.763] >> :wolfe.freenode.net 372 rvm-site-deploy :- Thank you for using freenode!
+[2012/03/19 18:40:12.763] >> :wolfe.freenode.net 372 rvm-site-deploy :-  
+[2012/03/19 18:40:12.763] >> :wolfe.freenode.net 372 rvm-site-deploy :- ***************************************************************
+[2012/03/19 18:40:12.763] >> :wolfe.freenode.net 372 rvm-site-deploy :- Please read http://blog.freenode.net/2010/11/be-safe-out-there/
+[2012/03/19 18:40:12.763] >> :wolfe.freenode.net 372 rvm-site-deploy :- ***************************************************************
+[2012/03/19 18:40:12.763] >> :wolfe.freenode.net 376 rvm-site-deploy :End of /MOTD command.
+[2012/03/19 18:40:12.763] >> :rvm-site-deploy MODE rvm-site-deploy :+i
+[2012/03/19 18:40:16.513] >> :rvm-site-deploy!~cinch@91.235.253.143 JOIN #rvm-test
+[2012/03/19 18:40:16.514] << NAMES #rvm-test
+[2012/03/19 18:40:16.514] << MODE #rvm-test +b
+[2012/03/19 18:40:16.514] << MODE #rvm-test
+[2012/03/19 18:40:16.627] >> :wolfe.freenode.net 353 rvm-site-deploy = #rvm-test :rvm-site-deploy mpapis deryl wayneeseguin deryldoucette @ChanServ
+[2012/03/19 18:40:16.627] >> :wolfe.freenode.net 366 rvm-site-deploy #rvm-test :End of /NAMES list.
+[2012/03/19 18:40:16.690] >> :wolfe.freenode.net 353 rvm-site-deploy = #rvm-test :rvm-site-deploy mpapis deryl wayneeseguin deryldoucette @ChanServ
+[2012/03/19 18:40:16.691] >> :wolfe.freenode.net 366 rvm-site-deploy #rvm-test :End of /NAMES list.
+[2012/03/19 18:40:16.858] >> :wolfe.freenode.net 368 rvm-site-deploy #rvm-test :End of Channel Ban List
+[2012/03/19 18:40:16.858] >> :wolfe.freenode.net 324 rvm-site-deploy #rvm-test +cnt
+[2012/03/19 18:40:16.858] >> :wolfe.freenode.net 329 rvm-site-deploy #rvm-test 1327430183
+/home/mpapis/.rvm/gems/ruby-1.9.2-p318@eployday/gems/cinch-1.1.3/lib/cinch/irc.rb:110:in `join': Interrupt
+	from /home/mpapis/.rvm/gems/ruby-1.9.2-p318@eployday/gems/cinch-1.1.3/lib/cinch/irc.rb:110:in `connect'
+	from /home/mpapis/.rvm/gems/ruby-1.9.2-p318@eployday/gems/cinch-1.1.3/lib/cinch/bot.rb:423:in `start'
+	from /home/mpapis/projects/opensource/eployday/lib/eployday/cli.rb:21:in `run'
+	from bin/eployday:4:in `<main>'
+-- configuration[trigger_text] => (?-mix:.*The build passed\..*)
+-- configuration[nick] => rvm-site-deploy
+-- configuration[channels] => ["#rvm-test"]

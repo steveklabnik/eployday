@@ -8,6 +8,7 @@ On server:
 
     gem install eployday
 
+
 Example for auto deploy on travis-ci tests passed `rvm-site.yml`:
 
     ---
@@ -19,6 +20,23 @@ Example for auto deploy on travis-ci tests passed `rvm-site.yml`:
       - travis-ci
     command: "bdsm deploy"
 
-Start server with:
+
+Test run:
+
+    eployday rvm-site.yml
+
+
+Start in background with:
 
     nohup eployday rvm-site.yml &
+
+
+Log file will be stored in `nohup.out`.
+
+# Development
+
+Development:
+
+    RUBYLIB=./lib ruby bin/eployday example.yml
+
+example.yml is ignored so you can use it development.
