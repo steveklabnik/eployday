@@ -6,7 +6,6 @@ module Eployday
   class CLI
     def initialize args
       raise "configuration file name required" if args.empty?
-      Eployday::Configuration.new args.first
     end
 
     def run

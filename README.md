@@ -14,10 +14,10 @@ Example for auto deploy on travis-ci tests passed `rvm-site.yml`:
     nick: rvm-site-deploy
     channels:
       - "#rvm-test"
-    trigger_text: "The build passed."
+    trigger_text: !ruby/regexp /.*The build passed\..*/
     allowed_users:
       - travis-ci
-    command: "echo bdsm deploy"
+    command: "bdsm deploy"
 
 Start server with:
 

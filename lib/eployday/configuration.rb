@@ -6,9 +6,9 @@ module Eployday
       @@configuration = YAML.load_file args
     end
     def self.[] key
-      @@configuration ||= {}
-      puts "-- reading #{key} => #{@@configuration[key.to_s]}"
+      puts "-- configuration[#{key}] => #{@@configuration[key.to_s]}"
       @@configuration[key.to_s]
     end
   end
+  Configuration.new ARGV.first unless ARGV.empty?
 end

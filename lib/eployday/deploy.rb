@@ -5,7 +5,7 @@ module Eployday
   class Deploy
     include Cinch::Plugin
 
-    match Eployday::Configuration[:trigger_text]
+    match Eployday::Configuration[:trigger_text], :use_prefix => false
 
     def execute(m)
       if PermissionChecker.allowed?(m.user)
