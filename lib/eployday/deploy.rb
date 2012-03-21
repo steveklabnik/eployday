@@ -9,9 +9,9 @@ module Eployday
 
     def execute(m)
       if PermissionChecker.allowed?(m.user)
-        m.reply "#{m.user.nick}: beginning deploy."
+        m.reply "beginning deploy.", true
         Kernel.system Eployday::Configuration[:command]
-        m.reply "#{m.user.nick}: deploy finished."
+        m.reply "deploy finished.", true
       end
     end
   end
